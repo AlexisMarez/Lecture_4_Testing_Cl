@@ -34,7 +34,7 @@ std::vector<bool> OddMask(std::vector<int>);
 // Sums all numbers in a vector and returns the resulting value
 int Sum(std::vector<int> nums) {
 	int total = 0;
-	for(int i = 0; i < nums.size(); i++) {
+	for(int i = 0; i < int(nums.size()); i++) {
 		total= total + nums[i];
 	}
 	return total;
@@ -45,7 +45,7 @@ int Product(std::vector<int> nums){
 
 	if(nums.size() != 0) {
 		int total = nums[0];
-		for(int i = 1; i < nums.size(); i++) {
+		for(int i = 1; i < int(nums.size()); i++) {
 		total = total * nums[i];
 		}
 		return total;
@@ -56,7 +56,7 @@ int Product(std::vector<int> nums){
 
 // Adds an integer n to each element of a given vector
 std::vector<int> VectorPlusN(std::vector<int> v, int n){
-	for(int i = 0; i < v.size(); i++) {
+	for(int i = 0; i < int(v.size()); i++) {
 		v[i] += n;
 	}
 
